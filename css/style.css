@@ -144,11 +144,12 @@ textarea {
    ========================================================================== */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
 }
 h2 {
-  font-size: 1.5em;
-  margin: 0.83em 0;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 h3 {
   font-size: 1.17em;
@@ -365,9 +366,9 @@ body {
  * layout.less
  * Standard object layout 
  */
-/* ==========================================================================
-   Theme
-   ========================================================================== */
+/*==========================================================================
+  Theme
+  ========================================================================== */
 [role="banner"] {
   background: #ffffff;
   *zoom: 1;
@@ -452,4 +453,42 @@ body {
 }
 .icon.news:hover {
   background-position: 0 -30px;
+}
+/**
+ * modules.less
+ * Reusable modules
+ */
+/*==========================================================================
+  Article Content Blocks
+  ========================================================================== */.content {
+  margin-top: 30px;
+  background: #ffffff;
+  -webkit-box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.15);
+}
+/*==========================================================================
+  Horizontal Media Blocks
+  ========================================================================== */
+.media {
+  overflow: hidden;
+}
+.media .img {
+  float: left;
+}
+.media .img img {
+  display: block;
+}
+.features h1,
+.features h2 {
+  line-height: 24px;
+  margin: 0;
+}
+.features h1 {
+  font-size: 14px;
+  font-weight: normal;
+}
+.features .featureCard {
+  width: 210px;
+  float: left;
 }
