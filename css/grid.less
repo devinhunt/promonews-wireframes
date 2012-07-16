@@ -1,0 +1,55 @@
+/**
+ * Grid.less
+ * Grid for the whole site
+ */
+
+/*==========================================================================
+  Grid generator
+  ========================================================================== */
+#grid(@gridColumnWidth, @gridGutterWidth) {
+
+  .spanX (@index) when (@index > 0) {
+    (~".span@{index}") { .span(@index); }
+    .spanX(@index - 1);
+  }
+  .spanX (0) {}
+
+  .offsetX (@index) when (@index > 0) {
+    (~".offset@{index}") { .offset(@index); }
+    .offsetX(@index - 1);
+  }
+  .offsetX (0) {}
+
+  .offset (@columns) {
+    margin-left: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns + 1));
+  }
+
+  .span (@columns) {
+    width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
+  }
+
+  .row {
+    margin-left: @gridGutterWidth * -1;
+    .clearfix();
+  }
+
+  [class*="span"] {
+    float: left;
+    margin-left: @gridGutterWidth;
+  }
+
+  // generate .spanX and .offsetX
+  .spanX (@gridColumns);
+  .offsetX (@gridColumns);
+}
+
+/*==========================================================================
+  Grid Declaration - 1050px
+  ========================================================================== */
+.container {
+  width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#grid(@gridColumnWidth, @gridGutterWidth);

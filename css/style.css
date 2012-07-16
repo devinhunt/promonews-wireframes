@@ -1,0 +1,370 @@
+/*
+Style.css
+Master style for Promonews.tv
+@author: Devin Hunt
+*/
+/*
+variables.css
+Standard, reusable constants for promonews.tv
+*/
+/* ==========================================================================
+   Theme
+   ========================================================================== */
+/* ==========================================================================
+   Body
+   ========================================================================== */
+/* ==========================================================================
+   Text
+   ========================================================================== */
+/**
+ * Mixins.less
+ * Exactly what it sounds like. Some parts adapted from bootstrap
+ */
+/*==========================================================================
+  Utilities
+  ========================================================================== */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+/*
+reset.less
+Adapted from Normalize.css http://github.com/necolas/normalize.css
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+#map_canvas img {
+  max-width: none;
+}
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+}
+button,
+input {
+  *overflow: visible;
+  line-height: normal;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+input[type="search"] {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-appearance: textfield;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+/**
+ * Type.less
+ */
+/*==========================================================================
+  Links
+  ========================================================================== */
+/* ==========================================================================
+   Text
+   ========================================================================== */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 1em 40px;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+p,
+pre {
+  margin: 1em 0;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+small {
+  font-size: 75%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+/** 
+ * scaffolding.less
+ * Page structure
+ */
+body {
+  margin: 0;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  background: #e6e6d4;
+}
+/**
+ * Grid.less
+ * Grid for the whole site
+ */
+/*==========================================================================
+  Grid generator
+  ========================================================================== */
+/*==========================================================================
+  Grid Declaration - 1050px
+  ========================================================================== */
+.container {
+  width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.row {
+  margin-left: -30px;
+  *zoom: 1;
+}
+.row:before,
+.row:after {
+  display: table;
+  content: "";
+}
+.row:after {
+  clear: both;
+}
+[class*="span"] {
+  float: left;
+  margin-left: 30px;
+}
+.span12 {
+  width: 1050px;
+}
+.span11 {
+  width: 960px;
+}
+.span10 {
+  width: 870px;
+}
+.span9 {
+  width: 780px;
+}
+.span8 {
+  width: 690px;
+}
+.span7 {
+  width: 600px;
+}
+.span6 {
+  width: 510px;
+}
+.span5 {
+  width: 420px;
+}
+.span4 {
+  width: 330px;
+}
+.span3 {
+  width: 240px;
+}
+.span2 {
+  width: 150px;
+}
+.span1 {
+  width: 60px;
+}
+.offset12 {
+  margin-left: 1110px;
+}
+.offset11 {
+  margin-left: 1020px;
+}
+.offset10 {
+  margin-left: 930px;
+}
+.offset9 {
+  margin-left: 840px;
+}
+.offset8 {
+  margin-left: 750px;
+}
+.offset7 {
+  margin-left: 660px;
+}
+.offset6 {
+  margin-left: 570px;
+}
+.offset5 {
+  margin-left: 480px;
+}
+.offset4 {
+  margin-left: 390px;
+}
+.offset3 {
+  margin-left: 300px;
+}
+.offset2 {
+  margin-left: 210px;
+}
+.offset1 {
+  margin-left: 120px;
+}
+/*
+ * layout.less
+ * Standard object layout 
+ */
+/* ==========================================================================
+   Theme
+   ========================================================================== */
+header[role="banner"] {
+  background: #ffffff;
+}
