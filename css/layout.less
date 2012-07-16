@@ -7,6 +7,38 @@
 /* ==========================================================================
    Theme
    ========================================================================== */
-header[role="banner"] {
+[role="banner"] {
   background: @containerColor;
+  padding: 20px 0;
+  .clearfix();
+}
+
+[role="navigation"] {
+  & > h1, & > a {
+    display: inline-block;
+    float: left;
+    margin: 0;
+  }
+  
+  & > h1 {
+    margin-right: 20px;
+  }
+  
+  & > a {
+    border-left: 1px solid @subtleColor;
+    padding-left: 10px;
+    width: 90px;
+  }
+  
+  .search {
+    
+  }
+}
+
+[role="main"] {
+  .container();
+}
+
+[role="footer"] {
+  .container();
 }

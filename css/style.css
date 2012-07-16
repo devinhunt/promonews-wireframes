@@ -365,6 +365,40 @@ body {
 /* ==========================================================================
    Theme
    ========================================================================== */
-header[role="banner"] {
+[role="banner"] {
   background: #ffffff;
+  padding: 20px 0;
+  *zoom: 1;
+}
+[role="banner"]:before,
+[role="banner"]:after {
+  display: table;
+  content: "";
+}
+[role="banner"]:after {
+  clear: both;
+}
+[role="navigation"]  > h1,
+[role="navigation"]  > a {
+  display: inline-block;
+  float: left;
+  margin: 0;
+}
+[role="navigation"]  > h1 {
+  margin-right: 20px;
+}
+[role="navigation"]  > a {
+  border-left: 1px solid #343465;
+  padding-left: 10px;
+  width: 90px;
+}
+[role="main"] {
+  width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+}
+[role="footer"] {
+  width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
 }
