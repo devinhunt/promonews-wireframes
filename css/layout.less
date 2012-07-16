@@ -31,7 +31,7 @@
   }
   
   & > a {
-    border-left: 1px solid @subtleColor;
+    //border-left: 1px solid @subtleColor;
     padding-left: 10px;
     height: 50px;
     width: 90px;
@@ -42,8 +42,19 @@
     }
   }
   
-  .search {
+  .search-form {
+    float: right; 
     
+    input[type="text"] {
+      display: inline-block;
+      height: 30px;
+      width: 220px;
+      padding: 10px;
+      line-height: 30px;
+      border: 0;
+      background-color: @bodyBackground;
+      .box-shadow(inset 0px 1px 3px rgba(0, 0, 0, .3));
+    }
   }
 }
 

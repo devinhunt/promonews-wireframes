@@ -34,6 +34,9 @@ Standard, reusable constants for promonews.tv
 .clearfix:after {
   clear: both;
 }
+/*==========================================================================
+  CSS3 Properties
+  ========================================================================== */
 /*
 reset.less
 Adapted from Normalize.css http://github.com/necolas/normalize.css
@@ -394,7 +397,6 @@ body {
   margin-right: 20px;
 }
 [role="navigation"]  > a {
-  border-left: 1px solid #343465;
   padding-left: 10px;
   height: 50px;
   width: 90px;
@@ -402,6 +404,21 @@ body {
 }
 [role="navigation"]  > a .icon {
   display: block;
+}
+[role="navigation"] .search-form {
+  float: right;
+}
+[role="navigation"] .search-form input[type="text"] {
+  display: inline-block;
+  height: 30px;
+  width: 220px;
+  padding: 10px;
+  line-height: 30px;
+  border: 0;
+  background-color: #e6e6d4;
+  -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
 }
 [role="main"] {
   width: 1050px;
