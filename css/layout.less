@@ -9,11 +9,17 @@
    ========================================================================== */
 [role="banner"] {
   background: @containerColor;
-  padding: 20px 0;
   .clearfix();
 }
 
+[role="user"] {
+  padding: 20px 0;
+}
+
 [role="navigation"] {
+  height: 50px;
+  padding: 20px 0;
+  
   & > h1, & > a {
     display: inline-block;
     float: left;
@@ -27,7 +33,13 @@
   & > a {
     border-left: 1px solid @subtleColor;
     padding-left: 10px;
+    height: 50px;
     width: 90px;
+    line-height: 20px;
+    
+    .icon {
+      display: block;
+    }
   }
   
   .search {

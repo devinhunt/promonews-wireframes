@@ -367,7 +367,6 @@ body {
    ========================================================================== */
 [role="banner"] {
   background: #ffffff;
-  padding: 20px 0;
   *zoom: 1;
 }
 [role="banner"]:before,
@@ -377,6 +376,13 @@ body {
 }
 [role="banner"]:after {
   clear: both;
+}
+[role="user"] {
+  padding: 20px 0;
+}
+[role="navigation"] {
+  height: 50px;
+  padding: 20px 0;
 }
 [role="navigation"]  > h1,
 [role="navigation"]  > a {
@@ -390,7 +396,12 @@ body {
 [role="navigation"]  > a {
   border-left: 1px solid #343465;
   padding-left: 10px;
+  height: 50px;
   width: 90px;
+  line-height: 20px;
+}
+[role="navigation"]  > a .icon {
+  display: block;
 }
 [role="main"] {
   width: 1050px;
@@ -401,4 +412,27 @@ body {
   width: 1050px;
   margin-left: auto;
   margin-right: auto;
+}
+/**
+ * Icons.less
+ * Icons used on Promonews
+ */
+.icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: text-top;
+  background-image: url(../images/icons.png);
+}
+.icon.video {
+  background-position: 0 0;
+}
+.icon.video:hover {
+  background-position: 0 0;
+}
+.icon.news {
+  background-position: 0 -30px;
+}
+.icon.news:hover {
+  background-position: 0 -30px;
 }
