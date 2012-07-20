@@ -1,0 +1,38 @@
+/**
+ * components.less
+ * UI Components
+ */
+
+/*==========================================================================
+  Menus
+  ========================================================================== */
+
+.dropdown {
+  position: relative;
+  
+  &:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 100;
+  display: none;
+  float: left;
+  min-width: 420px;
+  margin: 0px;
+  padding: 0 0 10px 10px;
+  background-color: #222;
+  
+  color: white;
+  
+  nav {
+    float: left;
+    width: 200px;
+    margin-left: 10px;
+    list-style: none;
+  }
+}
