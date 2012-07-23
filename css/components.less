@@ -4,6 +4,28 @@
  */
 
 /*==========================================================================
+  Navigation
+  ========================================================================== */
+.pagination {
+  border-top: @bodyBackground 1px solid;
+  
+  & > a {
+    display: inline-block;
+    border-right: 1px solid @bodyBackground;
+    width: 49%;
+    text-align: center;
+    line-height: 40px;
+    
+    &:last-child {
+      border: none;
+    }
+    &:last-child:first-child {
+      width: 100%;
+    }
+  }
+}
+
+/*==========================================================================
   Menus
   ========================================================================== */
 
