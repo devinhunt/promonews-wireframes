@@ -131,15 +131,10 @@ sub {
    Lists
    ========================================================================== */
 
-dl,
 menu,
 ol,
 ul {
   margin: 1em 0;
-}
-
-dd {
-  margin: 0 0 0 40px;
 }
 
 menu,
@@ -152,6 +147,27 @@ nav ul,
 nav ol {
   list-style: none;
   list-style-image: none;
+}
+
+dl {
+  margin: 0 20px @lineHeight 20px;
+  
+  dt, dd {
+    margin: 0;
+    text-indent: 0;
+  }
+  
+  dt {
+    margin-top: @lineHeight;
+    font-size: 12px;
+    font-weight: @fontWeight;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  dd {
+    font-size: @fontSize;
+  }
 }
 
 /* ==========================================================================
