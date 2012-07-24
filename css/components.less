@@ -46,7 +46,7 @@
   float: left;
   min-width: 420px;
   margin: 0px;
-  padding: 0 0 10px 10px;
+  padding: 10px 0;
   background-color: #222;
   
   color: white;
@@ -64,10 +64,23 @@
   	left: 10px;
   }
   
+  a {
+    color: white;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
   nav {
     float: left;
     width: 200px;
     margin-left: 10px;
     list-style: none;
+    
+    h2 {
+      margin: 0;
+    }
   }
 }
