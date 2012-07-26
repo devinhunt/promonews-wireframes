@@ -25,6 +25,37 @@
   }
 }
 
+// Layout for displaying chunks of meta data
+.meta {
+  border-top: 1px solid @bodyBackground;
+  border-bottom: 1px solid @bodyBackground;
+  margin: @lineHeight / 2 0px;
+  padding: 0;
+  list-style: none;
+  
+  li {
+    min-width: 100px;
+    display: inline-block;
+    border-right: 1px solid @bodyBackground;
+    padding: @lineHeight;
+    
+    &:last-child {
+      border-right: none;
+    }
+    
+    i {
+      display: block;
+      font-size: 12px;
+      font-weight: @fontWeight;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-style: normal;
+      margin: 0;
+    }
+  }
+  
+}
+
 /*==========================================================================
   Menus
   ========================================================================== */
@@ -83,4 +114,12 @@
       margin: 0;
     }
   }
+}
+
+
+/*==========================================================================
+  Comments
+  ========================================================================== */
+#comments {
+  margin: @lineHeight;
 }

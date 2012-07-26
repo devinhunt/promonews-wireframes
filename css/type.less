@@ -7,11 +7,12 @@
   ========================================================================== */
 
 a {
-  
+  color: darken(@brandColor, 15);
+  text-decoration: none;
 }
 
 a:hover {
-  
+  text-decoration: underline;
 }
 
 a:active {
@@ -25,8 +26,8 @@ a:active {
    
 h1 {
   font-size: 2em;
-  line-height: @lineHeight * 1.5;
-  margin: @lineHeight / 2 0px;
+  line-height: @lineHeight * 2;
+  margin: @lineHeight 0;
 }
 
 h2 {
@@ -34,6 +35,8 @@ h2 {
   font-weight: @fontWeight;
   text-transform: uppercase;
   letter-spacing: 2px;
+  margin-top: @lineHeight;
+  margin-top: @lineHeight / .8;
 }
 
 h3 {
@@ -80,7 +83,7 @@ mark {
 
 p,
 pre {
-  margin: 1em 0;
+  margin: @lineHeight 0;
 }
 
 code,
@@ -179,8 +182,12 @@ dl {
 article p, 
 article blockquote, 
 article h1, 
-article h2, 
-article date {
-  padding-left: 20px;
-  padding-right: 20px;
+article h2
+{
+  padding-left: @lineHeight;
+  padding-right: @lineHeight;
+}
+
+header + p {
+  font-size: 18px;
 }
