@@ -12,17 +12,17 @@
   <header role="banner">
     <div class="container">
       <aside role="user" class="row">
-        <nav class="span3">
+        <nav class="span2">
           <a href="/twitter">Twitter</a>
           <a href="/facebook">Facebook</a>
           <a href="/rss">RSS</a>
         </nav>
       
-        <div class="adz span6">
-          <img src="http://lorempixel.com/570/145/nightlife/" alt="Adz"/>
+        <div class="adz span8">
+          <img src="http://lorempixel.com/728/90/nightlife/" alt="Adz"/>
         </div>
       
-        <nav class="span3">
+        <nav class="span2">
           <a href="/login">Login</a> or <a href="/signup">Sign Up</a>
           <a href="/submit">Submit Your Video</a>
         </nav>
@@ -35,7 +35,7 @@
           </a>
         </h1>
         
-        <li class="dropdown current">
+        <li class="dropdown">
           <a href="/video.html" class="dropdown-toggle">
             <span class="icon video"></span>
             Video
@@ -77,7 +77,7 @@
           </div>
         </li>
         
-        <li>
+        <li class="current">
           <a href="/news.html">
             <span class="icon news"></span>
             News
@@ -121,18 +121,34 @@
   
   <div role="main">
     <div class="row">
-      <article  class="span8">
-        <header class="content clearfix">
-          <h1>Todd Terje - Inspector Norse</h1>
+      <article class="span8 content">
         
-          <div class="video">
-            <img src="http://lorempixel.com/690/390" width="690" height="390" />
-          </div>
+        <div class="video">
+          <img src="http://lorempixel.com/690/390" width="690" height="390" />
+        </div>
+      
+        <header>
+          <h1>Todd Terje - Inspector Norse</h1>
+          
+          <ul class="meta">
+            <li>
+              <i>Director</i>
+              <a href="#">Jeff Deson</a>
+            </li>             
+            <li>
+              <i>Posted On</i>
+              <date>Friday, 20. July 2012</date>
+            </li>
+            <li>
+              <i>Comments</i>
+              <a href="#comments">No Comments</a>
+            </li>
+          </ul>
         </header>
         
         <div class="row">
           <div class="span5">
-            <section class="content">
+            <section>
               <header>
                 <h2>About</h2>
               </header>
@@ -145,7 +161,7 @@
               </p>
             </section>
             
-            <section class="content">
+            <section>
               <header>
                 <h2>From <em>Jeff Desom</em>, Director</h2>
               </header>
@@ -159,11 +175,7 @@
             </section>
           </div>
       
-          <section class="span3 content">
-            <header class="titleBadge">
-              <h1><img src="images/badge-credits.png" alt="Credits"></h1>
-            </header>
-            
+          <section class="span3">
             <dl>
               <dt>Director</dt>
               <dd>Jeff Deson</dd>
@@ -173,26 +185,23 @@
               
               <dt>Costume</dt>
               <dd>Elisabetta Pian</dd>
-            </dl>
-          </section>
-          
-          <section class="span3 content">
-            <header class="titleBadge">
-              <h1><img src="images/badge-cast.png" alt="Cast"></h1>
-            </header>
-            
-            <dl>
-              <dt>Director</dt>
+              
+              <dt>Dancer</dt>
               <dd>Jeff Deson</dd>
               
-              <dt>Cinemaphotographer</dt>
+              <dt>Women in Black</dt>
               <dd>Jean-Louis Schuller</dd>
               
-              <dt>Costume</dt>
+              <dt>Disco Ball</dt>
               <dd>Elisabetta Pian</dd>
             </dl>
+            
           </section>
         </div>
+        
+        <section id="comments">          
+          <div class="fb-comments" data-href="http://example.com" data-num-posts="2" data-width="642"></div>
+        </section>
       </article>
   
       <div class="span4">
@@ -243,6 +252,17 @@
   <footer role="footer">
   
   </footer>
+  
+  <!-- Facebook Test Stuff-->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1&appId=165372770211726";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
   
 </body>
 </html>
