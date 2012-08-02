@@ -192,8 +192,8 @@ header + p {
   font-size: 18px;
 }
 
-// Reset to use up the space in a multiple column article
-/*article [class*="span"] p,
-article [class*="span"] blockquote {
-  padding-right: 0;
-}*/
+// Fix extra margin in article rows
+.row [class*="span"] p:first-child,
+.row [class*="span"] dt:first-child {
+  margin-top: 0
+}

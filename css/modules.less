@@ -45,6 +45,12 @@
     float: left; 
     border-right: 1px solid @bodyBackground;
     
+    a {
+      display: block;
+      width: 209px;
+      height: 210px;
+    }
+    
     & h1,
     & h2 {
       padding-left: 10px;
@@ -68,6 +74,10 @@
     
     header + p {
       font-size: @fontSize;
+    }
+    
+    .meta li:first-child {
+      padding-left: 0;
     }
   }
 }
