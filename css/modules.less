@@ -1,6 +1,6 @@
 /**
  * modules.less
- * Reusable modules
+ * Reusable contnet modules
  */
 
 /*==========================================================================
@@ -40,9 +40,10 @@
   }
   
   .featureCard {
-    width: 210px;
+    width: 209px;
     height: 210px;
     float: left; 
+    border-right: 1px solid @bodyBackground;
     
     & h1,
     & h2 {
@@ -60,5 +61,13 @@
 #latest-video {
   .img {
     margin-right: 30px;
+  }
+  
+  .abstract {
+    margin-top: @lineHeight * 2;
+    
+    header + p {
+      font-size: @fontSize;
+    }
   }
 }

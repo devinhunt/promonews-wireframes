@@ -25,17 +25,18 @@ a:active {
    ========================================================================== */
    
 h1 {
-  font-size: 2em;
-  line-height: @lineHeight * 2;
+  font-size: @headingSize;
+  line-height: @lineHeight;
   margin: @lineHeight 0;
 }
 
 h2 {
   font-size: 12px;
+  line-height: 12px;
   font-weight: @fontWeight;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-top: @lineHeight;
+  margin: @lineHeight 0;
 }
 
 h3 {
@@ -192,7 +193,7 @@ header + p {
 }
 
 // Reset to use up the space in a multiple column article
-article [class*="span"] p,
+/*article [class*="span"] p,
 article [class*="span"] blockquote {
   padding-right: 0;
-}
+}*/
