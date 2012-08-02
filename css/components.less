@@ -1,7 +1,98 @@
 /**
  * components.less
- * UI Components
+ * Reusable content blocks
  */
+ 
+/*==========================================================================
+  Article Content Blocks
+  ========================================================================== */ 
+.content {
+  position: relative;
+  margin-top: 30px;
+  background: @containerColor;
+  .box-shadow(-1px 1px 2px rgba(0, 0, 0, .15));
+}
+
+/*==========================================================================
+  Horizontal Media Blocks
+  ========================================================================== */
+// Image + Text blocks
+.media {
+  overflow: hidden;
+  
+  .img {
+    float: left;
+    margin-right: 20px;
+    img { display: block; }
+  }
+  
+  .meta li:first-child {
+    padding-left: 0;
+  }
+}
+
+// Strip of articles
+.features {
+  
+  h1, h2 {
+    line-height: @lineHeight;
+    margin: 0;
+  }
+  
+  h1 {
+    font-size: @fontSize;
+    font-weight: @fontWeight;
+  }
+  
+  .featureCard {
+    width: 209px;
+    height: 210px;
+    float: left; 
+    border-right: 1px solid @bodyBackground;
+    
+    a {
+      display: block;
+      width: 209px;
+      height: 210px;
+    }
+    
+    & h1,
+    & h2 {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    
+    img {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// Video Leaderboard
+#latest-video {
+  .img {
+    margin-right: 30px;
+  }
+  
+  .abstract {
+    margin-top: @lineHeight * 2;
+    
+    header + p {
+      font-size: @fontSize;
+    }
+  }
+}
+
+/*==========================================================================
+  Media Lists
+  ========================================================================== */
+.mediaList {
+  list-style: none;
+  
+  li {
+    margin: 20px 0;
+  }
+}
 
 /*==========================================================================
   Navigation
@@ -53,7 +144,6 @@
       margin: 0;
     }
   }
-  
 }
 
 /*==========================================================================
