@@ -709,10 +709,10 @@ body {
 .dropdown {
   position: relative;
 }
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdownMenu {
   display: block;
 }
-.dropdown-menu {
+.dropdownMenu {
   display: none;
   position: absolute;
   left: 0;
@@ -726,21 +726,42 @@ body {
   -moz-box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.3);
   box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.3);
 }
-.dropdown-menu ul {
+.dropdownMenu ul {
   margin: 0;
   padding: 0 0 0 0;
 }
-.dropdown-menu ul li a {
+.dropdownMenu ul li a {
   display: block;
   padding: 0 20px;
   text-decoration: none;
 }
-.dropdown-menu ul li a:hover {
+.dropdownMenu ul li a:hover {
   background: #00acdb;
   color: white;
 }
-.dropdown-menu ul li li a {
+.dropdownMenu ul li li a {
   padding-left: 40px;
+}
+.dropdownMenu.twoColMenu {
+  min-width: 480px;
+  *zoom: 1;
+}
+.dropdownMenu.twoColMenu:before,
+.dropdownMenu.twoColMenu:after {
+  display: table;
+  content: "";
+}
+.dropdownMenu.twoColMenu:after {
+  clear: both;
+}
+.dropdownMenu.twoColMenu .col {
+  float: left;
+  width: 240px;
+}
+.dropdownMenu.twoColMenu .col:first-child {
+  margin-left: 0;
+  margin-right: -1px;
+  border-right: 1px solid #e6e6d4;
 }
 /*==========================================================================
   Comments

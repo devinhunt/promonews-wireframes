@@ -154,12 +154,12 @@
 .dropdown {
   position: relative;
   
-  &:hover .dropdown-menu {
+  &:hover .dropdownMenu {
     display: block;
   }
 }
 
-.dropdown-menu {
+.dropdownMenu {
   display: none;
   
   position: absolute;
@@ -190,6 +190,22 @@
     
     li li a {
       padding-left: 40px;
+    }
+  }
+  
+  &.twoColMenu {
+    min-width: 480px;
+    .clearfix();
+    
+    .col {
+      float: left;
+      width: 240px;
+    }
+    
+    .col:first-child {
+      margin-left: 0;
+      margin-right: -1px;
+      border-right: 1px solid @bodyBackground;
     }
   }
 }
