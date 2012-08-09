@@ -32,32 +32,54 @@
   }
   
   & > li {
-    padding: 20px 0;
     height: 50px;
     width: 90px;
     line-height: 28px;
-    
-    &.current {
-      background-image: url(../images/nav-caret.png);
-      background-position: 10px bottom;
-      background-repeat: no-repeat;
-    }
-    
+  
     & > a {
       display: inline-block;
       height: 50px;
-      padding-left: 10px;
-      border-left: 1px solid @bodyBackground;
+      width: 90px;
+      padding: 20px 0 20px 0px;
       text-decoration: none;
       color: @subtleColor;
+      border: 0px solid @brandColor;
+      .transition(~"border .1s ease-in-out, padding .1s ease-in-out");
       
-      &:hover {
-        color: @highlightColor;
+      .icon {
+        display: block;
+        width: 30px;
+        height: 30px;
+        vertical-align: text-top;
+        background-image: url(../images/icons.png);
+
+        &.video { background-position: 0 0; }
+        &.news { background-position: 0 -30px; }
+        &.directors { background-position: 0 -60px; }
+        &.crew { background-position: 0 -90px; }
+        &.bands { background-position: 0 -120px; }
+        &.bug { background-position: 0 -150px; }
       }
     }
     
-    .icon {
-      display: block;
+    &.current > a {
+      padding-bottom: 10px;
+      border-bottom: 10px solid @bodyBackground;
+      color: @brandColorAlt;
+    }
+    
+    &:hover > a {
+      color: @brandColor;
+      
+      padding-bottom: 10px;
+      border-bottom: 10px solid @brandColor;
+      
+      .icon.video { background-position: -30px 0; }
+      .icon.news { background-position: -30px -30px; }
+      .icon.directors { background-position: -30px -60px; }
+      .icon.crew { background-position: -30px -90px; }
+      .icon.bands { background-position: -30px -120px; }
+      .icon.bug { background-position: -30px -150px; }
     }
   }
   

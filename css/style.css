@@ -16,6 +16,9 @@ Standard, reusable constants for promonews.tv
 /* ==========================================================================
    Text
    ========================================================================== */
+/* ==========================================================================
+   Z-Indices
+   ========================================================================== */
 /**
  * Mixins.less
  * Exactly what it sounds like. Some parts adapted from bootstrap
@@ -437,29 +440,76 @@ body {
   padding: 20px 0;
 }
 [role="navigation"]  > li {
-  padding: 20px 0;
   height: 50px;
   width: 90px;
   line-height: 28px;
 }
-[role="navigation"]  > li.current {
-  background-image: url(../images/nav-caret.png);
-  background-position: 10px bottom;
-  background-repeat: no-repeat;
-}
 [role="navigation"]  > li  > a {
   display: inline-block;
   height: 50px;
-  padding-left: 10px;
-  border-left: 1px solid #e6e6d4;
+  width: 90px;
+  padding: 20px 0 20px 0px;
   text-decoration: none;
+  color: #888888;
+  border: 0px solid #00acdb;
+  -webkit-transition: border .1s ease-in-out, padding .1s ease-in-out;
+  -moz-transition: border .1s ease-in-out, padding .1s ease-in-out;
+  -ms-transition: border .1s ease-in-out, padding .1s ease-in-out;
+  -o-transition: border .1s ease-in-out, padding .1s ease-in-out;
+  transition: border .1s ease-in-out, padding .1s ease-in-out;
+}
+[role="navigation"]  > li  > a .icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  vertical-align: text-top;
+  background-image: url(../images/icons.png);
+}
+[role="navigation"]  > li  > a .icon.video {
+  background-position: 0 0;
+}
+[role="navigation"]  > li  > a .icon.news {
+  background-position: 0 -30px;
+}
+[role="navigation"]  > li  > a .icon.directors {
+  background-position: 0 -60px;
+}
+[role="navigation"]  > li  > a .icon.crew {
+  background-position: 0 -90px;
+}
+[role="navigation"]  > li  > a .icon.bands {
+  background-position: 0 -120px;
+}
+[role="navigation"]  > li  > a .icon.bug {
+  background-position: 0 -150px;
+}
+[role="navigation"]  > li.current > a {
+  padding-bottom: 10px;
+  border-bottom: 10px solid #e6e6d4;
   color: #343465;
 }
-[role="navigation"]  > li  > a:hover {
-  color: #bf1e2e;
+[role="navigation"]  > li:hover > a {
+  color: #00acdb;
+  padding-bottom: 10px;
+  border-bottom: 10px solid #00acdb;
 }
-[role="navigation"]  > li .icon {
-  display: block;
+[role="navigation"]  > li:hover > a .icon.video {
+  background-position: -30px 0;
+}
+[role="navigation"]  > li:hover > a .icon.news {
+  background-position: -30px -30px;
+}
+[role="navigation"]  > li:hover > a .icon.directors {
+  background-position: -30px -60px;
+}
+[role="navigation"]  > li:hover > a .icon.crew {
+  background-position: -30px -90px;
+}
+[role="navigation"]  > li:hover > a .icon.bands {
+  background-position: -30px -120px;
+}
+[role="navigation"]  > li:hover > a .icon.bug {
+  background-position: -30px -150px;
 }
 [role="navigation"] .search-form {
   padding-top: 20px;
@@ -491,31 +541,6 @@ body {
  * Icons.less
  * Icons used on Promonews
  */
-.icon {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  vertical-align: text-top;
-  background-image: url(../images/icons.png);
-}
-.icon.video {
-  background-position: 0 0;
-}
-.icon.news {
-  background-position: 0 -30px;
-}
-.icon.directors {
-  background-position: 0 -60px;
-}
-.icon.crew {
-  background-position: 0 -90px;
-}
-.icon.bands {
-  background-position: 0 -120px;
-}
-.icon.bug {
-  background-position: 0 -150px;
-}
 .badgeHeader {
   position: relative;
 }
@@ -568,6 +593,9 @@ body {
   -webkit-box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.15);
   box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
 }
 /*==========================================================================
   Horizontal Media Blocks
@@ -685,45 +713,34 @@ body {
   display: block;
 }
 .dropdown-menu {
+  display: none;
   position: absolute;
   left: 0;
   top: 90px;
-  z-index: 100;
-  display: none;
+  z-index: 400;
   float: left;
-  min-width: 420px;
-  margin: 0px;
+  min-width: 240px;
   padding: 10px 0;
-  background-color: #222;
-  color: white;
+  background-color: #ffffff;
+  -webkit-box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.3);
 }
-.dropdown-menu:after {
-  bottom: 100%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-bottom-color: #222;
-  border-width: 10px;
-  left: 10px;
+.dropdown-menu ul {
+  margin: 0;
+  padding: 0 0 0 0;
 }
-.dropdown-menu a {
-  color: white;
+.dropdown-menu ul li a {
+  display: block;
+  padding: 0 20px;
   text-decoration: none;
 }
-.dropdown-menu a:hover {
-  text-decoration: underline;
+.dropdown-menu ul li a:hover {
+  background: #00acdb;
+  color: white;
 }
-.dropdown-menu nav {
-  float: left;
-  width: 200px;
-  margin-left: 10px;
-  list-style: none;
-}
-.dropdown-menu nav h2 {
-  margin: 0;
+.dropdown-menu ul li li a {
+  padding-left: 40px;
 }
 /*==========================================================================
   Comments
