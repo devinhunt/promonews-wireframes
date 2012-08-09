@@ -501,14 +501,20 @@ body {
 .icon.video {
   background-position: 0 0;
 }
-.icon.video:hover {
-  background-position: 0 0;
-}
 .icon.news {
   background-position: 0 -30px;
 }
-.icon.news:hover {
-  background-position: 0 -30px;
+.icon.directors {
+  background-position: 0 -60px;
+}
+.icon.crew {
+  background-position: 0 -90px;
+}
+.icon.bands {
+  background-position: 0 -120px;
+}
+.icon.bug {
+  background-position: 0 -150px;
 }
 .badgeHeader {
   position: relative;
