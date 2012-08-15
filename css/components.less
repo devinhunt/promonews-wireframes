@@ -100,21 +100,17 @@
   ========================================================================== */
 .pagination {
   border-top: @bodyBackground 1px solid;
+  .clearfix();
+  padding: 20px;
   
-  & > a {
-    display: inline-block;
-    border-right: 1px solid @bodyBackground;
-    width: 49%;
-    text-align: center;
-    line-height: 40px;
-    
-    &:last-child {
-      border: none;
-    }
-    &:last-child:first-child {
-      width: 100%;
-    }
+  .prev {
+    float: left;
   }
+  
+  .next {
+    float: right;
+  }
+  
 }
 
 // Layout for displaying chunks of meta data
@@ -145,6 +141,17 @@
       margin: 0;
     }
   }
+  
+  // Metas stacked ontop of each other
+  & + .meta {
+    margin-top: -@lineHeight / 2;
+    border-top: none;
+  }
+}
+
+// if it's a nav, we most likely want to the elements to be evenly seperated
+nav.meta li:first-child {
+  min-width: 40%;
 }
 
 /*==========================================================================
